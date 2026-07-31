@@ -2,7 +2,9 @@ import { Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 import RegisterPage from "../pages/auth/RegisterPage";
 import LoginPage from "../pages/auth/LoginPage";
-import RecommendedPage from "../pages/auth/RecommendedPage";
+import RecommendedPage from "../pages/RecommendedPage";
+import LibraryPage from "../pages/LibraryPage";
+import ReadingPage from "../pages/ReadingPage";
 
 const AppRoutes = () => {
   return (
@@ -11,8 +13,8 @@ const AppRoutes = () => {
       <Route path="/register" element={<RegisterPage />} />
       <Route element={<ProtectedRoute />}>
         <Route path="/recommended" element={<RecommendedPage />} />
-        {/* <Route path="/library" element={<LibraryPage />} /> */}
-        {/* <Route path="/reading/:bookId" element={<ReadingPage />} /> */}
+        <Route path="/library" element={<LibraryPage />} />
+        <Route path="/reading/:bookId" element={<ReadingPage />} />
       </Route>
     </Routes>
   );
