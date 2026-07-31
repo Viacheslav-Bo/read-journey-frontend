@@ -10,21 +10,32 @@ export const getLibrary = async (
   return res.data;
 };
 
+export const getLibraryBookById = async (id: string): Promise<LibraryBook> => {
+  const res = await api.get<LibraryBook>(`/library/${id}`);
+  return res.data;
+};
+
 interface AddBookParams {
   title: string;
   author: string;
   totalPages: number;
+  coverUrl?: string;
+  openLibraryId?: string;
 }
 
 export const addBook = async ({
   author,
   title,
   totalPages,
+  coverUrl,
+  openLibraryId,
 }: AddBookParams): Promise<LibraryBook> => {
   const res = await api.post<LibraryBook>("/library", {
     title,
     author,
     totalPages,
+    coverUrl,
+    openLibraryId,
   });
   return res.data;
 };
