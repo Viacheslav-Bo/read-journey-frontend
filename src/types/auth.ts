@@ -19,3 +19,7 @@ export interface AuthData {
 
 export type RegisterResponse = ApiResponse<AuthData>;
 export type LoginResponse = ApiResponse<AuthData>;
+
+export interface MeResponse {
+  user: User;
+}

@@ -1,14 +1,7 @@
 import { api } from "../client";
+import { MeResponse } from "../../types/auth";
 
-interface MeProps {
-  user: {
-    userId: string;
-    iat: number;
-    exp: number;
-  };
-}
-
-export const me = async (): Promise<MeProps> => {
-  const res = await api.post<MeProps>("/auth/me", {});
+export const me = async (): Promise<MeResponse> => {
+  const res = await api.get<MeResponse>("/auth/me");
   return res.data;
 };
