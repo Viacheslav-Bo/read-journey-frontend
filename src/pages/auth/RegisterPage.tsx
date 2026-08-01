@@ -1,12 +1,21 @@
 import RegisterForm from "../../components/auth/RegisterForm";
-import { Link } from "react-router-dom";
+import css from "./AuthPage.module.css";
 
 export default function RegisterPage() {
   return (
-    <div>
-      <h1>Expand your mind, reading a book</h1>
-      <RegisterForm />
-      <Link to="/login">Already have an account?</Link>
-    </div>
+    <main className="container">
+      <div className={css.mainWrapper}>
+        <div className={css.formWrapper}>
+          <RegisterForm />
+        </div>
+        <div className={css.phoneWrapper}>
+          <img
+            src="/phone.png"
+            alt="Read Journey app preview"
+            className={css.phone}
+          />
+        </div>
+      </div>
+    </main>
   );
 }

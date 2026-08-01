@@ -1,0 +1,161 @@
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+}
+
+.subtitle {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    margin-bottom: 20px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.fieldsRegister {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.fieldsLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 72px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.field label {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+}
+
+.field input {
+    width: 100%;
+    background-color: var(--color-surface-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: var(--color-text-primary);
+    font-size: 14px;
+}
+
+.field input:focus {
+    outline: none;
+    border-color: var(--color-text-primary);
+}
+
+.error {
+    color: var(--color-error);
+    font-size: 12px;
+}
+
+
+.submitButton {
+    flex-shrink: 0;
+    padding: 12px;
+    width: 100%;
+    max-width: 140px;
+    height: 42px;
+    background-color: var(--color-text-primary);
+    color: var(--color-bg);
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 30px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+}
+
+.formButtons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+}
+
+.submitButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.switchLink {
+    margin-top: 0;
+    color: var(--color-text-secondary);
+    font-size: 11px;
+
+    text-decoration: underline;
+}
+
+
+.fieldInline {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-surface-elevated);
+    border-radius: 12px;
+    padding: 14px;
+    gap: 10px;
+    height: 44px;
+}
+
+.fieldInline label {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    white-space: nowrap;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.fieldInline input {
+    flex: 1;
+    min-width: 0;
+    background: none;
+    border: none;
+    color: var(--color-text-primary);
+    font-size: 12px;
+    padding: 0;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.fieldInline input::placeholder {
+    color: var(--color-text-primary);
+    opacity: 1;
+}
+
+.fieldInline input:focus {
+    outline: none;
+}
+
+.eyeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    background: none;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.eyeIcon {
+    color: var(--color-text-primary);
+    width: 18px;
+    height: 18px;
+}

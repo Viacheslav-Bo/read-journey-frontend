@@ -1,12 +1,21 @@
 import LoginForm from "../../components/auth/LoginForm";
-import { Link } from "react-router-dom";
+import css from "./AuthPage.module.css";
 
 export default function LoginPage() {
   return (
-    <div>
-      <h1>Expand your mind, reading a book</h1>
-      <LoginForm />
-      <Link to="/register">Don’t have an account? </Link>
-    </div>
+    <main className="container">
+      <div className={css.mainWrapper}>
+        <div className={css.formWrapper}>
+          <LoginForm />
+        </div>
+        <div className={css.phoneWrapper}>
+          <img
+            src="/phone.png"
+            alt="Read Journey app preview"
+            className={css.phone}
+          />
+        </div>
+      </div>
+    </main>
   );
 }

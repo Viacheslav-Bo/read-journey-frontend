@@ -6,6 +6,8 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import css from "./AuthForm.module.css";
+import { Link } from "react-router-dom";
 
 interface LoginFormValues {
   email: string;
@@ -46,39 +48,84 @@ export default function LoginForm() {
   };
 
   return (
-    <Formik
-      initialValues={initialValues}
-      validationSchema={loginValidationSchema}
-      onSubmit={handleSubmit}
-    >
-      {({ isSubmitting }) => (
-        <Form>
-          <fieldset>
-            <label htmlFor="email">Email</label>
-            <Field type="email" name="email" id="email" />
-            <ErrorMessage name="email" component="div" />
+    <>
+      <svg width="42" height="17">
+        <use href="/sprite.svg#icon-logo" />
+      </svg>
 
-            <label htmlFor="password">Password</label>
-            <Field
-              type={isPasswordVisible ? "text" : "password"}
-              name="password"
-              id="password"
-            />
-            <ErrorMessage name="password" component="div" />
-            <button
-              type="button"
-              onClick={() => setIsPasswordVisible((prev) => !prev)}
-              aria-label={isPasswordVisible ? "Hide password" : "Show password"}
-              aria-pressed={isPasswordVisible}
-            >
-              {isPasswordVisible ? "🙈" : "👁️"}
-            </button>
-          </fieldset>
-          <button type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Wait..." : "Login"}
-          </button>
-        </Form>
-      )}
-    </Formik>
+      <h1 className={css.title}>
+        Expand your mind, reading <span className={css.subtitle}> a book</span>
+      </h1>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={loginValidationSchema}
+        onSubmit={handleSubmit}
+      >
+        {({ isSubmitting }) => (
+          <Form className={css.form}>
+            <div className={css.fieldsLogin}>
+              <div className={css.fieldInline}>
+                <label htmlFor="email">Email:</label>
+                <Field
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Your@email.com"
+                />
+              </div>
+              <ErrorMessage
+                name="email"
+                component="div"
+                className={css.error}
+              />
+
+              <div className={css.fieldInline}>
+                <label htmlFor="password">Password:</label>
+                <Field
+                  type={isPasswordVisible ? "text" : "password"}
+                  name="password"
+                  id="password"
+                  placeholder="Yourpasswordhere"
+                />
+                <button
+                  type="button"
+                  onClick={() => setIsPasswordVisible((prev) => !prev)}
+                  aria-label={
+                    isPasswordVisible ? "Hide password" : "Show password"
+                  }
+                  aria-pressed={isPasswordVisible}
+                  className={css.eyeButton}
+                >
+                  <svg className={css.eyeIcon} width="18" height="18">
+                    <use
+                      href={`/sprite.svg#${isPasswordVisible ? "icon-eye-off" : "icon-eye"}`}
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <ErrorMessage
+                name="password"
+                component="div"
+                className={css.error}
+              />
+            </div>
+
+            <div className={css.formButtons}>
+              <button
+                type="submit"
+                className={css.submitButton}
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Wait..." : "Login"}
+              </button>
+              <Link className={css.switchLink} to="/register">
+                Don’t have an account?
+              </Link>
+            </div>
+          </Form>
+        )}
+      </Formik>
+    </>
   );
 }
