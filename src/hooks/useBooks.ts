@@ -9,7 +9,7 @@ interface Filters {
   author: string;
 }
 
-export const useBooks = (page: number, filters: Filters) => {
+export const useBooks = (page: number, filters: Filters, limit: number) => {
   const [books, setBooks] = useState<RecommendedBook[]>([]);
   const [totalPages, setTotalPages] = useState(1);
 
@@ -18,7 +18,7 @@ export const useBooks = (page: number, filters: Filters) => {
       try {
         const response = await getBooks({
           page,
-          limit: 20,
+          limit,
           title: filters.title || undefined,
           author: filters.author || undefined,
         });
@@ -34,7 +34,7 @@ export const useBooks = (page: number, filters: Filters) => {
     };
 
     fetchBooks();
-  }, [page, filters]);
+  }, [page, limit, filters]);
 
   return { books, totalPages };
 };

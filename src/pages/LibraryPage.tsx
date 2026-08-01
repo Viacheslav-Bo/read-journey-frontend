@@ -5,7 +5,7 @@ import axios from "axios";
 import { useLibrary } from "../hooks/useLibrary";
 import { deleteBook } from "../api/library/library";
 import LibraryFilters from "../components/LibraryFilters";
-import BookCard from "../components/BookCard";
+import BookCard from "../components/BookCard/BookCard";
 import { ReadingStatus } from "../types/status";
 
 export default function LibraryPage() {

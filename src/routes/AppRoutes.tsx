@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 import RegisterPage from "../pages/auth/RegisterPage";
 import LoginPage from "../pages/auth/LoginPage";
-import RecommendedPage from "../pages/RecommendedPage";
+import RecommendedPage from "../pages/RecommendedPage/RecommendedPage";
 import LibraryPage from "../pages/LibraryPage";
 import ReadingPage from "../pages/ReadingPage";
 
