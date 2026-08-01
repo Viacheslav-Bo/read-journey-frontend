@@ -1,0 +1,73 @@
+.title {
+    font-size: 10px;
+    margin-bottom: 8px;
+
+}
+
+.label {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formElements {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fieldInline {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-surface-elevated);
+    border-radius: 12px;
+    padding: 14px;
+    gap: 5px;
+    height: 44px;
+}
+
+.fieldInline label {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.fieldInline input {
+    flex: 1;
+    min-width: 0;
+    background: none;
+    border: none;
+    color: var(--color-text-primary);
+    font-size: 12px;
+}
+
+.fieldInline input:focus {
+    outline: none;
+}
+
+.fieldInline input::placeholder {
+    color: var(--color-text-primary);
+    opacity: 1;
+}
+
+.fieldInline input:focus {
+    outline: none;
+}
+
+.applyButton {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid rgba(249, 249, 249, 0.2);
+    color: var(--color-text-primary);
+    font-size: 14px;
+    font-weight: 700;
+    height: 38px;
+    width: 98px;
+}

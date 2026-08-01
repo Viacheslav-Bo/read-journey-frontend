@@ -1,0 +1,27 @@
+.card {
+    cursor: pointer;
+    width: 100%;
+}
+
+.cover {
+    display: block;
+    width: 100%;
+    max-width: 137px;
+    height: 208px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+
+}
+
+.author {
+    margin-top: 2px;
+    font-size: 10px;
+    color: var(--color-text-secondary);
+}

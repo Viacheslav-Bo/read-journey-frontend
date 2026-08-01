@@ -1,0 +1,29 @@
+.pagination {
+    display: flex;
+    gap: 8px;
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+
+    background: transparent;
+    color: var(--color-text-primary);
+}
+
+.button svg {
+    width: 16px;
+    height: 16px;
+}
+
+.button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
