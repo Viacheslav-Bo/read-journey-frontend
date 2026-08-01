@@ -1,0 +1,51 @@
+.sidebar {
+
+    background: var(--color-surface);
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.recommended {
+    margin-top: 10px;
+    padding: 40px 20px;
+    background: var(--color-surface);
+    border-radius: 30px;
+}
+
+.recommendedHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.recommendedHeader h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.booksList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.booksList>* {
+    width: calc((100% - 20px) / 2);
+}
+
+@media screen and (min-width: 768px) {
+    .booksList>* {
+        width: calc((100% - 60px) / 4);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .booksList>* {
+        width: calc((100% - 80px) / 5);
+    }
+}
