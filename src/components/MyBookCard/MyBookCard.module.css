@@ -1,0 +1,127 @@
+.panel {
+    background-color: var(--color-surface);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.timeLeft {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.cover {
+    width: 140px;
+    height: 208px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.bookTitle {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.bookAuthor {
+    color: var(--color-text-secondary);
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recordButton {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--color-text-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    padding: 0;
+
+}
+
+.recordIcon {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+.stopIcon {
+    width: 15px;
+    height: 15px;
+    display: block;
+
+}
+
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 28px;
+
+    }
+
+    .panel {
+
+        padding: 40px 40px 25px 40px;
+    }
+
+    .cover {
+        margin-bottom: 25px;
+        width: 169px;
+        height: 256px;
+    }
+
+    .bookTitle {
+        font-size: 20px;
+        margin-bottom: 4px;
+
+    }
+
+    .bookAuthor {
+
+        font-size: 14px;
+        margin-bottom: 16px;
+
+    }
+
+    .recordButton {
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .recordIcon {
+        width: 40px;
+        height: 40px;
+
+    }
+
+    .stopIcon {
+        width: 20px;
+        height: 20px;
+
+    }
+}

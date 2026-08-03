@@ -4,9 +4,11 @@ import { MessageResponse } from "../../types/message";
 
 export const startReading = async (
   libraryBookId: string,
+  startPage: number,
 ): Promise<MessageResponse> => {
   const res = await api.post<MessageResponse>(
     `/reading/${libraryBookId}/start`,
+    { startPage },
   );
   return res.data;
 };

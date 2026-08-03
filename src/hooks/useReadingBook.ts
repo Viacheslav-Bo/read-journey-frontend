@@ -34,7 +34,9 @@ export const useReadingBook = (bookId?: string) => {
   const hasOpenSession = sessions.some((s) => s.endPage === null);
 
   const progressPercent =
-    book ? Math.round((book.currentPage / book.totalPages) * 100) : 0;
+    book ?
+      Math.min(100, Math.round((book.currentPage / book.totalPages) * 100))
+    : 0;
 
   const averageSpeed = (() => {
     const finished = sessions.filter(

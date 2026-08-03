@@ -1,0 +1,23 @@
+.chart {
+    width: 43px;
+    height: 18px;
+    transform-origin: left center;
+}
+
+.area {
+    fill: rgba(48, 185, 77, 0.22);
+}
+
+.line {
+    fill: none;
+    stroke: var(--color-green);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@media (min-width: 768px) {
+    .chart {
+        transform: scale(1.37);
+    }
+}

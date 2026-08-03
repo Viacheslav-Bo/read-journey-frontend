@@ -1,0 +1,84 @@
+.panel {
+    background-color: var(--color-surface);
+    border-radius: 20px;
+
+}
+
+.label {
+    color: var(--color-text-primary);
+    font-size: 10px;
+    margin-bottom: 8px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fieldInline {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-surface-elevated);
+    border-radius: 12px;
+    padding: 14px;
+    gap: 10px;
+    height: 44px;
+}
+
+.fieldInline label {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.fieldInline input {
+    flex: 1;
+    min-width: 0;
+    background: none;
+    border: none;
+    color: var(--color-text-primary);
+    font-size: 12px;
+}
+
+.fieldInline input:focus {
+    outline: none;
+}
+
+.error {
+    color: var(--color-error);
+    font-size: 12px;
+}
+
+.submitButton {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background-color: var(--color-text-surface);
+    color: var(--color-text-primary);
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid rgba(249, 249, 249, 0.2);
+}
+
+.submitButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (min-width: 768px) {
+    .label {
+        font-size: 14px;
+    }
+
+    .fieldInline label {
+        font-size: 14px;
+    }
+
+    .fieldInline input {
+        font-size: 14px;
+    }
+
+    .submitButton {
+        font-size: 16px;
+    }
+}
