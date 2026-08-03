@@ -1,0 +1,84 @@
+.panel {
+    background-color: var(--color-surface-elevated);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.cover {
+    width: 100%;
+    height: 107px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.bookTitle {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 2px;
+}
+
+.bookAuthor {
+    font-size: 10px;
+    color: var(--color-text-secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.homeLink {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.arrowLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+
+    color: var(--color-text-primary);
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 20px;
+
+    }
+
+
+}
+
+@media (min-width: 1440px) {}

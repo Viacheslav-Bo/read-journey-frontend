@@ -1,0 +1,88 @@
+/* .panel {} */
+
+.label {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.formContent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.formTitle {
+
+    font-size: 10px;
+    line-height: 1.2;
+
+
+}
+
+.fieldInline {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-surface-elevated);
+    height: 44px;
+    border-radius: 12px;
+    padding: 14px;
+    gap: 10px;
+}
+
+.fieldInline label {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.fieldInline input {
+    flex: 1;
+    min-width: 0;
+    background: none;
+    border: none;
+    color: var(--color-text-primary);
+    font-size: 14px;
+}
+
+::placeholder {
+    color: var(--color-text-primary);
+}
+
+.fieldInline input:focus {
+    outline: none;
+}
+
+.error {
+    color: var(--color-error);
+    font-size: 12px;
+}
+
+.submitButton {
+    align-self: flex-start;
+    padding: 10px 24px;
+    background-color: transparent;
+    border: 1px solid var(--color-text-primary);
+    color: var(--color-text-primary);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.submitButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+}
+
+@media screen and (min-width: 768px) {
+    .formTitle {
+        font-size: 14px;
+    }
+}

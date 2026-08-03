@@ -1,0 +1,142 @@
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 100%;
+    min-width: 0;
+}
+
+.topWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 20px;
+    border-radius: 30px;
+    background-color: var(--color-surface);
+    width: 100%;
+    min-width: 0;
+}
+
+.myLibraryPanel {
+    background-color: var(--color-surface);
+    border-radius: 30px;
+    padding: 40px 20px 65px 20px;
+    width: 100%;
+    min-width: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+.emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.emptyIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 999px;
+    background-color: var(--color-surface-elevated);
+    font-size: 32px;
+}
+
+.emptyText {
+    font-size: 14px;
+    color: var(--color-text-primary);
+    max-width: 260px;
+    width: 197px;
+}
+
+.emptyText strong {
+    color: var(--color-text-secondary);
+}
+
+.bookGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    min-width: 0;
+}
+
+.bookGrid>* {
+    min-width: 0;
+}
+
+.deleteButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    border: 1px solid rgba(232, 80, 80, 0.2);
+    background-color: rgba(232, 80, 80, 0.1);
+}
+
+.bookGrid>* {
+    flex: 0 0 calc((100% - 20px) / 2);
+    min-width: 0;
+}
+
+@media (min-width: 768px) {
+
+    .pageWrapper {
+        gap: 16px;
+    }
+
+    .topWrapper {
+        flex-direction: row;
+        padding: 32px;
+        gap: 32px;
+    }
+
+    .topWrapper>* {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .myLibraryPanel {
+
+        padding: 40px;
+
+    }
+
+    .title {
+        font-size: 28px;
+
+    }
+
+
+
+
+    .bookGrid>* {
+        flex-basis: calc((100% - 60px) / 4);
+    }
+}
+
+@media (min-width: 1440px) {
+    .bookGrid>* {
+        flex-basis: calc((100% - 80px) / 5);
+    }
+}
