@@ -29,7 +29,7 @@ body {
   font-family: var(--font-family);
   background-color: var(--color-bg);
   color: var(--color-text-primary);
-  margin: 0 auto;
+
 
 }
 
@@ -75,13 +75,14 @@ select:-webkit-autofill {
 
 @media (min-width: 768px) {
   .container {
-    padding-inline: 32px;
+    width: 704px;
+    padding-inline: 0;
   }
 }
 
 @media (min-width: 1440px) {
   .container {
-    max-width: 1440px;
-    padding-inline: 64px;
+    width: 1312px;
+    padding-inline: 0;
   }
 }

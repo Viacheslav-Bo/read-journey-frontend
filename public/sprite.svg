@@ -11,11 +11,18 @@
     <path d="M15.8063 10.6312L7.3688 2.19373C5.96255 0.731231 3.6563 0.731231 2.1938 2.13748C0.731299 3.54373 0.731299 5.90623 2.1938 7.31248L2.25005 7.36873L3.82505 8.99998L4.61255 8.21248L2.9813 6.58123C2.02505 5.62498 2.02505 3.99373 2.9813 3.03748C3.93755 2.08123 5.5688 2.02498 6.52505 2.98123L6.5813 3.03748L14.9625 11.4187C15.975 12.375 15.975 14.0062 15.0188 14.9625C14.0625 15.975 12.4313 15.975 11.475 15.0187L11.4188 14.9625L7.2563 10.8C6.6938 10.2375 6.75005 9.33748 7.2563 8.83123C7.52596 8.58696 7.87682 8.45167 8.24067 8.45167C8.60453 8.45167 8.95538 8.58696 9.22505 8.83123L11.5313 11.1375L12.3188 10.35L9.9563 7.98748C9.71683 7.76102 9.43491 7.58419 9.12679 7.4672C8.81866 7.3502 8.49042 7.29535 8.161 7.30581C7.83157 7.31627 7.50748 7.39182 7.20739 7.52813C6.90731 7.66443 6.63717 7.85878 6.41255 8.09998C5.51255 9.05623 5.51255 10.575 6.41255 11.5875L10.6313 15.8062C12.0375 17.2687 14.3438 17.2687 15.8063 15.8625C17.2688 14.4562 17.2688 12.0937 15.8063 10.6312C15.8063 10.6875 15.8063 10.6312 15.8063 10.6312Z" fill="currentColor"/>
   </symbol>
 
-  <!-- icon-record: red circle with ring (block.svg) -->
-  <symbol id="icon-record" viewBox="0 0 50 50" fill="none">
-    <circle cx="25" cy="25" r="20" fill="#E90516"/>
-    <circle cx="25" cy="25" r="24" stroke="#F9F9F9" stroke-width="2"/>
-  </symbol>
+<!-- Star -->
+<symbol id="icon-star" viewBox="0 0 32 32">
+  <path
+    d="M16 3.5L19.86 11.32L28.5 12.58L22.25 18.67L23.73 27.27L16 23.21L8.27 27.27L9.75 18.67L3.5 12.58L12.14 11.32L16 3.5Z"
+    fill="currentColor"
+  />
+</symbol>
+
+<!-- Stop -->
+<symbol id="icon-stop" viewBox="0 0 15 15">
+  <rect x="0" y="0" width="15" height="15" rx="2" fill="#E90516"/>
+</symbol>
 
   <!-- icon-eye (eye.svg) -->
   <symbol id="icon-eye" viewBox="0 0 20 20" fill="none">
@@ -84,6 +91,48 @@
         <rect width="20" height="20" fill="white"/>
       </clipPath>
     </defs>
+  </symbol>
+
+  <!-- icon-menu: hamburger -->
+  <symbol id="icon-menu" viewBox="0 0 28 28" fill="none">
+    <path d="M3.5 14H24.5M3.5 7H24.5M10.5 21H24.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+ 
+  <!-- icon-diary: ring-bound notebook -->
+  <symbol id="icon-diary" viewBox="0 0 14 14" fill="none">
+    <path d="M1.75 3.5H2.91667H12.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M11.0837 3.50002V11.6667C11.0837 11.9761 10.9607 12.2729 10.742 12.4916C10.5232 12.7104 10.2264 12.8334 9.91699 12.8334H4.08366C3.77424 12.8334 3.47749 12.7104 3.2587 12.4916C3.03991 12.2729 2.91699 11.9761 2.91699 11.6667V3.50002M4.66699 3.50002V2.33335C4.66699 2.02393 4.78991 1.72719 5.0087 1.5084C5.22749 1.2896 5.52424 1.16669 5.83366 1.16669H8.16699C8.47641 1.16669 8.77316 1.2896 8.99195 1.5084C9.21074 1.72719 9.33366 2.02393 9.33366 2.33335V3.50002" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5.83301 6.41669V9.91669" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8.16699 6.41669V9.91669" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+ 
+  <!-- icon-close: X -->
+  <symbol id="icon-close" viewBox="0 0 22 22" fill="none">
+    <path d="M16.5 5.5L5.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5.5 5.5L16.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+ 
+  <!-- icon-chevron-right -->
+  <symbol id="icon-chevron-right" viewBox="0 0 16 16" fill="none">
+    <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+ 
+  <!-- icon-chevron-left -->
+  <symbol id="icon-chevron-left" viewBox="0 0 16 16" fill="none">
+    <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+ 
+  <!-- icon-chevron-down -->
+  <symbol id="icon-chevron-down" viewBox="0 0 16 16" fill="none">
+    <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+ 
+  <!-- icon-trash: delete (red) -->
+  <symbol id="icon-trash" viewBox="0 0 14 14" fill="none">
+    <path d="M1.75 3.5H2.91667H12.25" stroke="#E85050" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M11.0837 3.5V11.6667C11.0837 11.9761 10.9607 12.2728 10.742 12.4916C10.5232 12.7104 10.2264 12.8333 9.91699 12.8333H4.08366C3.77424 12.8333 3.47749 12.7104 3.2587 12.4916C3.03991 12.2728 2.91699 11.9761 2.91699 11.6667V3.5M4.66699 3.5V2.33333C4.66699 2.02392 4.78991 1.72717 5.0087 1.50838C5.22749 1.28958 5.52424 1.16667 5.83366 1.16667H8.16699C8.47641 1.16667 8.77316 1.28958 8.99195 1.50838C9.21074 1.72717 9.33366 2.02392 9.33366 2.33333V3.5" stroke="#E85050" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5.83301 6.41667V9.91667" stroke="#E85050" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8.16699 6.41667V9.91667" stroke="#E85050" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
 
 </svg>
