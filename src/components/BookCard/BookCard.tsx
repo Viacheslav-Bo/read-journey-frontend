@@ -23,10 +23,14 @@ export default function BookCard({
         alt={`Cover of ${title}`}
       />
 
-      <h3 className={css.title}>{title}</h3>
-      <p className={css.author}>{author}</p>
+      <div className={css.footer}>
+        <div className={css.info}>
+          <h3 className={css.title}>{title}</h3>
+          <p className={css.author}>{author}</p>
+        </div>
 
-      {children}
+        {children}
+      </div>
     </article>
   );
 }

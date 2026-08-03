@@ -39,8 +39,36 @@
 }
 
 @media screen and (min-width: 768px) {
+
+    .sidebar {
+        flex-direction: row;
+        padding: 32px;
+        gap: 32px;
+
+    }
+
+    .sidebar> :first-child {
+        flex: 0 0 295px;
+    }
+
+    .sidebar> :last-child {
+        flex: 0 0 313px;
+    }
+
     .booksList>* {
-        width: calc((100% - 60px) / 4);
+        width: calc((100% - 75px) / 4);
+    }
+
+    .recommended {
+
+        padding: 40px;
+        margin-top: 16px;
+    }
+
+    .booksList {
+
+        row-gap: 27px;
+        column-gap: 25px;
     }
 }
 

@@ -5,11 +5,11 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import BookCard from "../../components/BookCard/BookCard";
 import { Pagination } from "../../components/Pagination/Pagination";
-import Modal from "../../components/Modal";
 import { RecommendedBook } from "../../types/books";
 import axios from "axios";
 import WorkoutCard from "../../components/WorkoutCard/WorkoutCard";
 import css from "./RecommendedPage.module.css";
+import AddBookModal from "../../components/AddBookModal/AddBookModal";
 
 export default function RecommendedPage() {
   const [page, setPage] = useState(1);
@@ -105,26 +105,13 @@ export default function RecommendedPage() {
         </div>
       </section>
 
-      <Modal isOpen={selectedBook !== null} onClose={handleCloseModal}>
-        {selectedBook && (
-          <div>
-            <img
-              src={selectedBook.coverUrl ?? "/placeholder-book.png"}
-              alt={`Cover of ${selectedBook.title}`}
-            />
-            <h2>{selectedBook.title}</h2>
-            <p>{selectedBook.author}</p>
-            <input
-              type="number"
-              min="1"
-              placeholder="Enter number of pages"
-              value={manualPages}
-              onChange={(e) => setManualPages(e.target.value)}
-            />
-            <button onClick={handleAddToLibrary}>Add to library</button>
-          </div>
-        )}
-      </Modal>
+      <AddBookModal
+        book={selectedBook}
+        manualPages={manualPages}
+        onPagesChange={setManualPages}
+        onAdd={handleAddToLibrary}
+        onClose={handleCloseModal}
+      />
     </main>
   );
 }

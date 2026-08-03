@@ -1,13 +1,14 @@
 .card {
     cursor: pointer;
+    min-width: 0;
     width: 100%;
 }
 
 .cover {
     display: block;
     width: 100%;
-    max-width: 137px;
-    height: 208px;
+    height: auto;
+    aspect-ratio: 137 / 208;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 8px;
@@ -17,11 +18,29 @@
     font-size: 14px;
     font-weight: 700;
     color: var(--color-text-primary);
-
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .author {
     margin-top: 2px;
     font-size: 10px;
     color: var(--color-text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.info {
+    flex: 1;
+    min-width: 0;
 }

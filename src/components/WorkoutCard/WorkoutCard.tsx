@@ -31,9 +31,9 @@ export default function WorkoutCard() {
           My library
         </Link>
 
-        <Link to="/library" className={css.arrow}>
-          <svg width="40" height="40">
-            <use href="/sprite.svg#icon-arrow-right" />
+        <Link to="/library" className={css.arrow} aria-label="Go to library">
+          <svg className={css.arrowIcon} viewBox="0 0 24 24">
+            <use href="/sprite.svg#icon-login" />
           </svg>
         </Link>
       </div>

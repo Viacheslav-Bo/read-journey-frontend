@@ -63,15 +63,8 @@
     font-size: 14px;
 }
 
-.arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.arrow svg {
-    width: 28px;
-    height: 28px;
-    fill: none;
-    stroke: var(--color-text-primary);
+.arrowIcon {
+    width: 24px;
+    height: 24px;
+    color: var(--color-text-primary);
 }
