@@ -1,9 +1,9 @@
-import RegisterForm from "../../components/auth/RegisterForm";
+import RegisterForm from "../../components/Auth/RegisterForm";
 import css from "./AuthPage.module.css";
 
 export default function RegisterPage() {
   return (
-    <main className="container">
+    <>
       <div className={css.mainWrapper}>
         <div className={css.formWrapper}>
           <RegisterForm />
@@ -16,6 +16,6 @@ export default function RegisterPage() {
           />
         </div>
       </div>
-    </main>
+    </>
   );
 }

@@ -51,9 +51,13 @@ export default function RegisterForm() {
 
   return (
     <>
-      <svg width="42" height="17">
-        <use href="/sprite.svg#icon-logo" />
-      </svg>
+      <div className={css.logo}>
+        <svg width="42" height="17" aria-hidden="true">
+          <use href="/sprite.svg#icon-logo" />
+        </svg>
+
+        <span className={css.logoText}>READ JOURNEY</span>
+      </div>
 
       <h1 className={css.title}>
         Expand your mind, reading <span className={css.subtitle}> a book</span>

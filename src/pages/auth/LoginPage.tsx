@@ -1,9 +1,9 @@
-import LoginForm from "../../components/auth/LoginForm";
+import LoginForm from "../../components/Auth/LoginForm";
 import css from "./AuthPage.module.css";
 
 export default function LoginPage() {
   return (
-    <main className="container">
+    <>
       <div className={css.mainWrapper}>
         <div className={css.formWrapper}>
           <LoginForm />
@@ -16,6 +16,6 @@ export default function LoginPage() {
           />
         </div>
       </div>
-    </main>
+    </>
   );
 }

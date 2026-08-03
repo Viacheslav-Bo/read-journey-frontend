@@ -1,3 +1,13 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.logoText {
+    display: none;
+}
+
 .title {
     font-size: 32px;
     font-weight: 700;
@@ -158,4 +168,76 @@
     color: var(--color-text-primary);
     width: 18px;
     height: 18px;
+}
+
+@media (min-width: 768px) {
+
+    .title,
+    .subtitle {
+        font-size: 64px;
+        line-height: 0.94;
+        letter-spacing: 0.02em;
+        max-width: 444px;
+    }
+
+    .title {
+        margin-top: 157px;
+        margin-bottom: 40px;
+    }
+
+
+    .fieldsRegister {
+        gap: 14px;
+        margin-bottom: 82px;
+    }
+
+    .fieldsLogin {
+        gap: 14px;
+        margin-bottom: 146px;
+    }
+
+    .fieldInline {
+        height: 50px;
+        padding: 16px 18px;
+        max-width: 472px;
+    }
+
+    .fieldInline label {
+        font-size: 16px;
+    }
+
+    .fieldInline input {
+        font-size: 16px;
+    }
+
+    .submitButton {
+        width: 225px;
+        max-width: none;
+        height: 52px;
+        font-size: 20px;
+    }
+
+    .formButtons {
+        gap: 20px;
+    }
+
+    .switchLink {
+        font-size: 14px;
+    }
+
+    .eyeButton,
+    .eyeIcon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .logoText {
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--color-text-primary);
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+    }
 }
