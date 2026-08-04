@@ -1,8 +1,9 @@
+import css from "./ReadingChart.module.css";
+
 export default function ReadingChart() {
   return (
     <svg
-      width="44"
-      height="18"
+      className={css.chart}
       viewBox="0 0 44 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -36,3 +36,22 @@
     font-size: 32px;
     line-height: 1;
 }
+
+@media screen and (min-width: 1440px) {
+    .title {
+        font-size: 20px;
+    }
+
+    .text {
+        margin-bottom: 60px;
+    }
+
+    .iconWrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .emoji {
+        font-size: 50px;
+    }
+}

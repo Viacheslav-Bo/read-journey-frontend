@@ -52,20 +52,22 @@ export default function ReadingDetails({
           </button>
         </div>
       </div>
-      <div className={css.content}>
-        {tab === "diary" ?
-          <DiaryList
-            sessions={sessions}
-            totalPages={totalPages}
-            onDelete={onDeleteSession}
-          />
-        : <Statistics
-            sessions={sessions}
-            progressPercent={progressPercent}
-            totalPages={totalPages}
-          />
-        }
-      </div>
+      {tab === "diary" ?
+        <div className={css.contentWrapper}>
+          <div className={css.content}>
+            <DiaryList
+              sessions={sessions}
+              totalPages={totalPages}
+              onDelete={onDeleteSession}
+            />
+          </div>
+        </div>
+      : <Statistics
+          sessions={sessions}
+          progressPercent={progressPercent}
+          totalPages={totalPages}
+        />
+      }
     </div>
   );
 }

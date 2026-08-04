@@ -7,7 +7,7 @@
   background-color: var(--color-surface-elevated);
   padding: 27px;
   border-radius: 12px;
-
+  height: 211px;
 }
 
 
@@ -25,13 +25,14 @@
 }
 
 .legendPercent {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--color-text-primary);
+  margin-bottom: 4px;
 }
 
 .legendPages {
-  font-size: 12px;
+  font-size: 10px;
   color: var(--color-text-secondary);
 }
 
@@ -41,38 +42,72 @@
   border-radius: 4px;
   background: var(--color-green);
   flex-shrink: 0;
-  align-self: center;
+  align-self: baseline;
 
 }
 
 .ring {
-  --progress: 0;
-
-  width: 138px;
-  height: 138px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: conic-gradient(var(--color-green) calc(var(--progress) * 1%),
-      var(--color-surface) 0);
+  flex-shrink: 0;
 }
 
-.ringInner {
-  width: 108px;
-  height: 108px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: var(--color-surface-elevated);
-
-  font-size: 28px;
+.ringText {
+  font-size: 18px;
   font-weight: 700;
+  fill: var(--color-text-primary);
+}
+
+
+
+.description {
+  display: none;
+}
+
+
+
+@media (min-width: 768px) {
+  .ring {
+    width: 138px;
+    height: 138px;
+  }
+
+  .wrapper {
+    height: 252px;
+    width: 321px;
+    padding: 28px;
+  }
+
+  .legendPercent {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .legendPages {
+    font-size: 12px;
+  }
+}
+
+
+
+@media screen and (min-width: 1440px) {
+
+  .ring {
+    width: 168px;
+    height: 168px;
+  }
+
+  .wrapper {
+    height: 281px;
+    width: 313px;
+  }
+
+  .description {
+    display: block;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--color-text-secondary);
+    width: 293px;
+    margin-bottom: 20px;
+  }
 }

@@ -3,15 +3,20 @@
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    flex: 1;
-    min-height: 0;
+    flex: none;
 
 }
 
+.contentWrapper {
+    height: 211px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
 .content {
-    flex: 1;
+    height: 100%;
     overflow-y: auto;
-    min-height: 0;
+
 
 
 }
@@ -54,12 +59,14 @@
 }
 
 @media screen and (min-width: 768px) {
-    .panel {
-        height: 293px;
+    .contentWrapper {
+        height: 252px;
+        width: 321px;
     }
 
     .title {
-        font-size: 20px
+        font-size: 20px;
+        font-weight: 500;
     }
 
     .header {
@@ -67,4 +74,16 @@
     }
 
     ;
+}
+
+@media screen and (min-width: 1440px) {
+
+    .contentWrapper {
+        height: 373px;
+        width: 313px;
+    }
+
+    .header {
+        margin-bottom: 20px;
+    }
 }

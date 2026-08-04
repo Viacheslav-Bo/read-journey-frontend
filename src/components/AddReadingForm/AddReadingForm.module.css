@@ -52,6 +52,9 @@
 
 .submitButton {
     align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 20px;
     background-color: var(--color-text-surface);
     color: var(--color-text-primary);
@@ -80,5 +83,18 @@
 
     .submitButton {
         font-size: 16px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .submitButton {
+        padding: 12px 28px;
+        height: 42px;
+        margin-bottom: 20px;
+    }
+
+    .fieldInline {
+
+        height: 50px;
     }
 }

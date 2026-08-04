@@ -2,6 +2,11 @@
     background-color: var(--color-surface);
     border-radius: 20px;
     padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
 }
 
 .header {
@@ -55,7 +60,7 @@
     width: 40px;
     height: 40px;
     border: 2px solid var(--color-text-primary);
-    border-radius: 50%;
+    border-radius: 999px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,5 +128,33 @@
         width: 20px;
         height: 20px;
 
+    }
+}
+
+@media (min-width: 1440px) {
+    .panel {
+        flex: 1;
+        min-width: 0;
+
+        padding: 40px 40px 28px;
+    }
+
+    .cover {
+        width: 224px;
+        height: 340px;
+    }
+
+    .bookAuthor {
+        margin-bottom: 25px;
+    }
+
+    .recordButton {
+        margin-bottom: 25px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .header {
+        margin-bottom: 44px;
     }
 }
