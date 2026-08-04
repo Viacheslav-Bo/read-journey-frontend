@@ -12,7 +12,7 @@
     justify-content: center;
 
     border: 1px solid var(--color-border);
-    border-radius: 50%;
+    border-radius: 999px;
 
     background: transparent;
     color: var(--color-text-primary);
@@ -26,4 +26,17 @@
 .button:disabled {
     opacity: 0.3;
     cursor: not-allowed;
+}
+
+@media (min-width: 1440px) {
+    .button {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .button svg {
+        width: 16px;
+        height: 16px;
+    }
 }
