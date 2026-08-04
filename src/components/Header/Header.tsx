@@ -60,6 +60,8 @@ export default function Header() {
           <svg className={css.logo} width="32" height="14">
             <use href="/sprite.svg#icon-logo" />
           </svg>
+
+          <span className={css.logoText}>READ JOURNEY</span>
         </Link>
 
         <nav className={css.nav}>
@@ -76,6 +78,7 @@ export default function Header() {
             <span className={css.userAvatar}>
               {user?.name.charAt(0).toUpperCase()}
             </span>
+            <span className={css.userName}>{user?.name}</span>
           </div>
 
           <button

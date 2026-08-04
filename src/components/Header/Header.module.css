@@ -69,12 +69,27 @@
 
     background-color: var(--color-blue);
     border-radius: 999px;
+
+}
+
+.userBar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.userName {
+    display: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-text-primary);
 }
 
 .rightGroup {
     display: flex;
     align-items: center;
     gap: 10px;
+
 }
 
 .userAvatar {
@@ -84,7 +99,7 @@
     width: 35px;
     height: 35px;
     border: 1px solid var(--color-border);
-    border-radius: 999px;
+    border-radius: 100%;
     color: var(--color-text-primary);
     font-size: 14px;
     font-weight: 600;
@@ -93,13 +108,6 @@
 
 .logoutButton {
     display: none;
-    padding: 10px 24px;
-    background-color: var(--color-text-primary);
-    border: none;
-    border-radius: 999px;
-    color: var(--color-bg);
-    font-size: 14px;
-    font-weight: 600;
 }
 
 .burgerButton {
@@ -112,6 +120,8 @@
     padding: 0;
     color: var(--color-text-primary);
 }
+
+
 
 /* ===== мобільне меню (drawer) ===== */
 .mobileMenu {
@@ -160,8 +170,39 @@
     font-weight: 700;
 }
 
+.logoLink {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logoText {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+    .logoText {
+        display: none;
+    }
+}
+
+
 /* ===== Tablet+ (від 768px) ===== */
 @media (min-width: 768px) {
+
+
+
+
+
     .header {
         position: relative;
         padding: 16px;
@@ -192,7 +233,10 @@
     }
 
     .logoutButton {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
         margin: 0 auto;
         padding: 12px 28px;
         background-color: var(--color-surface);
@@ -206,5 +250,19 @@
 
     .burgerButton {
         display: none;
+    }
+}
+
+@media (min-width: 1440px) {
+    .header {
+        height: 74px;
+    }
+
+    .logoText {
+        font-size: 18px;
+    }
+
+    .userName {
+        display: block;
     }
 }
