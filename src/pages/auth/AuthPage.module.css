@@ -11,7 +11,7 @@
     padding: 20px 20px 40px 20px;
     background-color: var(--color-surface);
     border-radius: 30px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .phoneWrapper {
@@ -20,7 +20,7 @@
     padding: 20px 40px 0px 40px;
     background-color: var(--color-surface);
     border-radius: 30px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .phoneMobile {
@@ -42,7 +42,7 @@
         max-width: 704px;
         margin: 0 auto;
         padding: 40px 64px;
-        height: 90vh;
+
     }
 
     .phoneWrapper {
@@ -51,29 +51,31 @@
 }
 
 @media (min-width: 1440px) {
+
+
+
     .mainWrapper {
         flex-direction: row;
         gap: 16px;
-        align-items: stretch;
+        padding: 32px;
+        justify-content: center;
     }
 
     .formWrapper {
-        width: 50%;
-        max-width: none;
-        margin: 0;
-        height: auto;
 
-        ;
+        max-width: 600px;
+        margin: 0;
+
     }
 
     .phoneWrapper {
         display: flex;
-        align-items: flex-start;
         justify-content: center;
-        width: 50%;
-        max-width: none;
+        align-items: flex-end;
+        flex-direction: column;
         margin: 0;
-        overflow: hidden;
+        max-width: 600px;
+        align-items: center;
         padding: 80px 97px 0px 97px;
 
     }
@@ -83,9 +85,10 @@
     }
 
     .phoneDesktop {
-        display: block;
         width: 100%;
+        max-width: 405px;
+        display: block;
         height: auto;
-        margin: 0;
+        margin-top: auto;
     }
 }

@@ -7,6 +7,6 @@ import { ToastContainer } from "react-toastify";
 createRoot(document.getElementById("root") as HTMLDivElement).render(
   <StrictMode>
     <App />
-    <ToastContainer />
+    <ToastContainer theme="dark" position="top-right" autoClose={3000} />
   </StrictMode>,
 );
