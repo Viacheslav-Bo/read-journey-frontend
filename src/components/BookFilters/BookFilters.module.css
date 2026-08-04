@@ -26,10 +26,17 @@
     display: flex;
     align-items: center;
     background-color: var(--color-surface-elevated);
+    border: 1px solid transparent;
     border-radius: 12px;
     padding: 14px;
     gap: 5px;
     height: 44px;
+    transition: border-color 0.2s ease;
+}
+
+.fieldInline:hover,
+.fieldInline:focus-within {
+    border-color: rgba(249, 249, 249, 0.4);
 }
 
 .fieldInline label {
@@ -70,4 +77,19 @@
     font-weight: 700;
     height: 38px;
     width: 98px;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+
+.applyButton:hover,
+.applyButton:focus-visible {
+    background-color: var(--color-text-primary);
+    color: var(--color-bg);
+    border-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 14px;
+    }
 }

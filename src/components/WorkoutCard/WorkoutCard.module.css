@@ -62,12 +62,24 @@
     color: var(--color-text-secondary);
     text-decoration: underline;
     font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.link:hover,
+.link:focus-visible {
+    color: var(--color-text-primary);
 }
 
 .arrowIcon {
     width: 24px;
     height: 24px;
     color: var(--color-text-primary);
+    transition: transform 0.2s ease;
+}
+
+.arrowIcon:hover,
+.arrowIcon:focus-visible {
+    transform: translateX(4px);
 }
 
 @media screen and (min-width: 1440px) {

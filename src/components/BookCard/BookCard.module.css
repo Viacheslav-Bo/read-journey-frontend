@@ -3,7 +3,16 @@
     min-width: 0;
     width: 137px;
     flex-shrink: 0;
+    transition: transform 0.25s ease;
+
 }
+
+.card:hover .cover,
+.card:focus-visible .cover {
+    transform: scale(1.04);
+}
+
+
 
 .cover {
     display: block;
@@ -12,6 +21,7 @@
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 8px;
+    transition: transform 0.25s ease;
 }
 
 .title {
@@ -43,4 +53,28 @@
 .info {
     flex: 1;
     min-width: 0;
+}
+
+.skeleton {
+    background: linear-gradient(90deg,
+            var(--color-surface-elevated) 25%,
+            var(--color-border) 50%,
+            var(--color-surface-elevated) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite;
+    border-radius: 8px;
+}
+
+.skeletonLine {
+    height: 12px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }

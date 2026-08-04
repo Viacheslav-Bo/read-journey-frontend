@@ -1,4 +1,5 @@
 import css from "./BookCard.module.css";
+import { useState } from "react";
 
 interface BookCardProps {
   title: string;
@@ -15,12 +16,16 @@ export default function BookCard({
   children,
   onClick,
 }: BookCardProps) {
+  const [imgLoaded, setImgLoaded] = useState(false);
   return (
     <article className={css.card} onClick={onClick}>
+      {!imgLoaded && <div className={`${css.cover} ${css.skeleton}`} />}
       <img
         className={css.cover}
+        style={{ display: imgLoaded ? "block" : "none" }}
         src={coverUrl || "/placeholder-book.png"}
         alt={`Cover of ${title}`}
+        onLoad={() => setImgLoaded(true)}
       />
 
       <div className={css.footer}>
