@@ -65,10 +65,14 @@ export default function LoginForm() {
         validationSchema={loginValidationSchema}
         onSubmit={handleSubmit}
       >
-        {({ isSubmitting }) => (
+        {({ isSubmitting, errors, touched }) => (
           <Form className={css.form}>
             <div className={css.fieldsLogin}>
-              <div className={css.fieldInline}>
+              <div
+                className={css.fieldInline}
+                data-error={!!(errors.email && touched.email)}
+                data-valid={!!(touched.email && !errors.email)}
+              >
                 <label htmlFor="email">Email:</label>
                 <Field
                   type="email"
@@ -83,7 +87,11 @@ export default function LoginForm() {
                 className={css.error}
               />
 
-              <div className={css.fieldInline}>
+              <div
+                className={css.fieldInline}
+                data-error={!!(errors.password && touched.password)}
+                data-valid={!!(touched.password && !errors.password)}
+              >
                 <label htmlFor="password">Password:</label>
                 <Field
                   type={isPasswordVisible ? "text" : "password"}
@@ -106,6 +114,11 @@ export default function LoginForm() {
                     />
                   </svg>
                 </button>
+                {touched.password && !errors.password && (
+                  <svg width="18" height="18" className={css.checkIcon}>
+                    <use href="/sprite.svg#icon-check" />
+                  </svg>
+                )}
               </div>
 
               <ErrorMessage

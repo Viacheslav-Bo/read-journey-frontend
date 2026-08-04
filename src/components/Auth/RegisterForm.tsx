@@ -68,10 +68,14 @@ export default function RegisterForm() {
         validationSchema={registerValidationSchema}
         onSubmit={handleSubmit}
       >
-        {({ isSubmitting }) => (
+        {({ isSubmitting, errors, touched }) => (
           <Form className={css.form}>
             <div className={css.fieldsRegister}>
-              <div className={css.fieldInline}>
+              <div
+                className={css.fieldInline}
+                data-error={!!(errors.name && touched.name)}
+                data-valid={!!(touched.name && !errors.name)}
+              >
                 <label htmlFor="name">Name:</label>
                 <Field
                   type="text"
@@ -82,7 +86,11 @@ export default function RegisterForm() {
               </div>
               <ErrorMessage name="name" component="div" className={css.error} />
 
-              <div className={css.fieldInline}>
+              <div
+                className={css.fieldInline}
+                data-error={!!(errors.email && touched.email)}
+                data-valid={!!(touched.email && !errors.email)}
+              >
                 <label htmlFor="email">Email:</label>
                 <Field
                   type="email"
@@ -97,7 +105,11 @@ export default function RegisterForm() {
                 className={css.error}
               />
 
-              <div className={css.fieldInline}>
+              <div
+                className={css.fieldInline}
+                data-error={!!(errors.password && touched.password)}
+                data-valid={!!(touched.password && !errors.password)}
+              >
                 <label htmlFor="password">Password:</label>
                 <Field
                   type={isPasswordVisible ? "text" : "password"}

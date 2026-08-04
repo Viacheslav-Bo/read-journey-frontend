@@ -12,7 +12,12 @@ export default function RegisterPage() {
           <img
             src="/phone.png"
             alt="Read Journey app preview"
-            className={css.phone}
+            className={css.phoneMobile}
+          />
+          <img
+            src="/phonedesc.png"
+            alt="Read Journey app preview"
+            className={css.phoneDesktop}
           />
         </div>
       </div>
