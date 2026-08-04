@@ -10,6 +10,7 @@ import axios from "axios";
 import WorkoutCard from "../../components/WorkoutCard/WorkoutCard";
 import css from "./RecommendedPage.module.css";
 import AddBookModal from "../../components/AddBookModal/AddBookModal";
+import InfoCard from "../../components/InfoCard/InfoCard";
 
 export default function RecommendedPage() {
   const [page, setPage] = useState(1);
@@ -71,39 +72,42 @@ export default function RecommendedPage() {
 
   return (
     <main className="container">
-      <div className={css.sidebar}>
-        <BookFilters
-          onApply={(filters) => {
-            setFilters(filters);
-            setPage(1);
-          }}
-        />
-        <WorkoutCard />
-      </div>
-
-      <section className={css.recommended}>
-        <div className={css.recommendedHeader}>
-          <h2 className={css.title}>Recommended</h2>
-
-          <Pagination
-            page={page}
-            totalPages={totalPages}
-            onPageChange={setPage}
+      <div className={css.layout}>
+        <div className={css.sidebar}>
+          <BookFilters
+            onApply={(filters) => {
+              setFilters(filters);
+              setPage(1);
+            }}
           />
+          <WorkoutCard />
+          <InfoCard />
         </div>
 
-        <div className={css.booksList}>
-          {books.map((book) => (
-            <BookCard
-              key={book.openLibraryId}
-              title={book.title}
-              author={book.author}
-              coverUrl={book.coverUrl ?? "/placeholder-book.png"}
-              onClick={() => handleSelectBook(book)}
+        <section className={css.recommended}>
+          <div className={css.recommendedHeader}>
+            <h2 className={css.title}>Recommended</h2>
+
+            <Pagination
+              page={page}
+              totalPages={totalPages}
+              onPageChange={setPage}
             />
-          ))}
-        </div>
-      </section>
+          </div>
+
+          <div className={css.booksList}>
+            {books.map((book) => (
+              <BookCard
+                key={book.openLibraryId}
+                title={book.title}
+                author={book.author}
+                coverUrl={book.coverUrl ?? "/placeholder-book.png"}
+                onClick={() => handleSelectBook(book)}
+              />
+            ))}
+          </div>
+        </section>
+      </div>
 
       <AddBookModal
         book={selectedBook}
