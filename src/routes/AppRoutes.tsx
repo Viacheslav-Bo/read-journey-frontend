@@ -5,10 +5,12 @@ import LoginPage from "../pages/auth/LoginPage";
 import RecommendedPage from "../pages/RecommendedPage/RecommendedPage";
 import LibraryPage from "../pages/LibraryPage/LibraryPage";
 import ReadingPage from "../pages/ReadingPage/ReadingPage";
+import HomeRedirect from "./HomeRedirect";
 
 const AppRoutes = () => {
   return (
     <Routes>
+      <Route path="/" element={<HomeRedirect />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route element={<ProtectedRoute />}>
