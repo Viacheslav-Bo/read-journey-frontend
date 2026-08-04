@@ -9,15 +9,13 @@
     align-items: center;
     justify-content: center;
 
-    padding: 20px;
     z-index: 1000;
 }
 
 .modal {
     position: relative;
-
     display: inline-block;
-    max-width: calc(100vw - 40px);
+    max-width: 335px;
     border: 1px solid rgba(104, 104, 104, 0.2);
     background: var(--color-surface);
     border-radius: 30px;

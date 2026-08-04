@@ -29,11 +29,27 @@
     display: flex;
     align-items: center;
     background-color: var(--color-surface-elevated);
+    border: 1px solid transparent;
     height: 44px;
     border-radius: 12px;
     padding: 14px;
     gap: 10px;
+    transition: border-color 0.2s ease;
 }
+
+.fieldInline:hover,
+.fieldInline:focus-within {
+    border-color: rgba(249, 249, 249, 0.4);
+}
+
+.fieldInline[data-error="true"] {
+    border-color: var(--color-error);
+}
+
+.fieldInline[data-valid="true"] {
+    border-color: var(--color-green);
+}
+
 
 .fieldInline label {
     color: var(--color-text-secondary);
@@ -71,6 +87,14 @@
     color: var(--color-text-primary);
     font-weight: 600;
     font-size: 14px;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.submitButton:hover,
+.submitButton:focus-visible {
+    background-color: var(--color-text-primary);
+    color: var(--color-bg);
+    border-color: transparent;
 }
 
 .submitButton:disabled {

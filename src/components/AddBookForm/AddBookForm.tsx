@@ -55,11 +55,15 @@ export default function AddBookForm({ onAdd }: AddBookFormProps) {
         validationSchema={addBookSchema}
         onSubmit={handleSubmit}
       >
-        {({ isSubmitting }) => (
+        {({ isSubmitting, errors, touched }) => (
           <Form className={css.form}>
             <div className={css.formContent}>
               <h3 className={css.formTitle}>Create your library:</h3>
-              <div className={css.fieldInline}>
+              <div
+                className={css.fieldInline}
+                data-error={!!(errors.title && touched.title)}
+                data-valid={!!(touched.title && !errors.title)}
+              >
                 <label htmlFor="title">Book title:</label>
                 <Field
                   type="text"
@@ -74,7 +78,11 @@ export default function AddBookForm({ onAdd }: AddBookFormProps) {
                 className={css.error}
               />
 
-              <div className={css.fieldInline}>
+              <div
+                className={css.fieldInline}
+                data-error={!!(errors.author && touched.author)}
+                data-valid={!!(touched.author && !errors.author)}
+              >
                 <label htmlFor="author">The author:</label>
                 <Field
                   type="text"
@@ -89,7 +97,11 @@ export default function AddBookForm({ onAdd }: AddBookFormProps) {
                 className={css.error}
               />
 
-              <div className={css.fieldInline}>
+              <div
+                className={css.fieldInline}
+                data-error={!!(errors.totalPages && touched.totalPages)}
+                data-valid={!!(touched.totalPages && !errors.totalPages)}
+              >
                 <label htmlFor="totalPages">Number of pages:</label>
                 <Field
                   type="number"
