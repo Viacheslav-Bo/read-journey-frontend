@@ -11,6 +11,7 @@ import WorkoutCard from "../../components/WorkoutCard/WorkoutCard";
 import css from "./RecommendedPage.module.css";
 import AddBookModal from "../../components/AddBookModal/AddBookModal";
 import InfoCard from "../../components/InfoCard/InfoCard";
+import BookCardSkeleton from "../../components/BookCard/BookCardSkeleton";
 
 export default function RecommendedPage() {
   const [page, setPage] = useState(1);
@@ -26,7 +27,7 @@ export default function RecommendedPage() {
     : window.innerWidth >= 768 ? 8
     : 2;
 
-  const { books, totalPages } = useBooks(page, filters, limit);
+  const { books, totalPages, isLoading } = useBooks(page, filters, limit);
 
   const handleSelectBook = (book: RecommendedBook) => {
     setSelectedBook(book);
@@ -96,15 +97,20 @@ export default function RecommendedPage() {
           </div>
 
           <div className={css.booksList}>
-            {books.map((book) => (
-              <BookCard
-                key={book.openLibraryId}
-                title={book.title}
-                author={book.author}
-                coverUrl={book.coverUrl ?? "/placeholder-book.png"}
-                onClick={() => handleSelectBook(book)}
-              />
-            ))}
+            {isLoading ?
+              Array.from({ length: limit }).map((_, i) => (
+                <BookCardSkeleton key={i} />
+              ))
+            : books.map((book) => (
+                <BookCard
+                  key={book.openLibraryId}
+                  title={book.title}
+                  author={book.author}
+                  coverUrl={book.coverUrl ?? "/placeholder-book.png"}
+                  onClick={() => handleSelectBook(book)}
+                />
+              ))
+            }
           </div>
         </section>
       </div>

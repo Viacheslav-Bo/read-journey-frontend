@@ -18,6 +18,7 @@
     padding: 40px 20px;
     background: var(--color-surface);
     border-radius: 30px;
+    min-height: 382px;
 }
 
 .recommendedHeader {
@@ -71,6 +72,7 @@
 
         padding: 40px;
         margin-top: 16px;
+        min-height: 663px;
     }
 
     .booksList {
@@ -114,6 +116,7 @@
         flex: 1;
         margin-top: 0;
         padding: 40px 40px 28px 40px;
+        min-height: 652px;
     }
 
     .booksList {
