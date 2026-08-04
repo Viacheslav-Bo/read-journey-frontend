@@ -68,7 +68,7 @@ select:-webkit-autofill {
 }
 
 .container {
-  width: 100%;
+  width: 375px;
   margin: 0 auto;
   padding-inline: 20px;
 }
@@ -82,7 +82,7 @@ select:-webkit-autofill {
 
 @media (min-width: 1440px) {
   .container {
-    width: 1312px;
+    width: 1216px;
     padding-inline: 0;
   }
 }
