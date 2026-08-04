@@ -5,6 +5,7 @@
 
     width: 100%;
     min-width: 0;
+    margin-bottom: 40px;
 }
 
 .topWrapper {
@@ -22,7 +23,7 @@
 .myLibraryPanel {
     background-color: var(--color-surface);
     border-radius: 30px;
-    padding: 40px 20px 65px 20px;
+    padding: 40px 20px 30px 20px;
     width: 100%;
     min-width: 0;
 }
@@ -89,20 +90,28 @@
     align-items: center;
     width: 28px;
     height: 28px;
-    border-radius: 100%;
+    border-radius: 999px;
     border: 1px solid rgba(232, 80, 80, 0.2);
     background-color: rgba(232, 80, 80, 0.1);
 }
 
-.bookGrid>* {
-    flex: 0 0 calc((100% - 20px) / 2);
-    min-width: 0;
+.paginationMobile {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
+
+.paginationDesktop {
+    display: none;
+}
+
+
 
 @media (min-width: 768px) {
 
     .pageWrapper {
         gap: 16px;
+        margin-bottom: 32px;
     }
 
     .topWrapper {
@@ -127,16 +136,37 @@
 
     }
 
-
-
-
-    .bookGrid>* {
-        flex-basis: calc((100% - 60px) / 4);
+    .paginationMobile {
+        display: none;
     }
+
+    .paginationDesktop {
+        display: block;
+    }
+
 }
 
 @media (min-width: 1440px) {
-    .bookGrid>* {
-        flex-basis: calc((100% - 80px) / 5);
+    .pageWrapper {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .pageWrapper> :first-child {
+        width: 353px;
+        flex-shrink: 0;
+    }
+
+    .pageWrapper> :last-child {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .topWrapper {
+        flex-direction: column;
+        gap: 78px;
+        padding: 40px 20px 20px 20px;
+
     }
 }

@@ -4,6 +4,7 @@
     align-items: center;
     text-align: center;
     padding: 40px;
+    width: 335px;
 }
 
 .modalImage {
@@ -80,5 +81,10 @@
     .modalButton,
     .modalInput {
         max-width: 300px;
+    }
+
+    .modalContent {
+        width: 500px;
+        padding: 50px;
     }
 }

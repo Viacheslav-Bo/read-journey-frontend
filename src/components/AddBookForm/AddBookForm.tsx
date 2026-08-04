@@ -58,7 +58,7 @@ export default function AddBookForm({ onAdd }: AddBookFormProps) {
         {({ isSubmitting }) => (
           <Form className={css.form}>
             <div className={css.formContent}>
-              <h3 className={css.formTitle}>Filters:</h3>
+              <h3 className={css.formTitle}>Create your library:</h3>
               <div className={css.fieldInline}>
                 <label htmlFor="title">Book title:</label>
                 <Field
