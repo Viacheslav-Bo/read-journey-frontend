@@ -7,8 +7,10 @@ import { useCallback, useEffect, useState } from "react";
 
 export const useLibrary = (status?: ReadingStatus) => {
   const [books, setBooks] = useState<LibraryBook[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchBooks = useCallback(async () => {
+    setIsLoading(true);
     try {
       const response = await getLibrary(status);
       setBooks(response);
@@ -18,6 +20,8 @@ export const useLibrary = (status?: ReadingStatus) => {
       } else {
         toast.error("Something went wrong");
       }
+    } finally {
+      setIsLoading(false);
     }
   }, [status]);
 
@@ -33,5 +37,6 @@ export const useLibrary = (status?: ReadingStatus) => {
     books,
     refetch: fetchBooks,
     removeBook,
+    isLoading,
   };
 };

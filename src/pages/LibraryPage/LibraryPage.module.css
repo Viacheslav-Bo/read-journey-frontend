@@ -26,6 +26,7 @@
     padding: 40px 20px 30px 20px;
     width: 100%;
     min-width: 0;
+    min-height: 400px;
 }
 
 .header {
@@ -93,6 +94,13 @@
     border-radius: 999px;
     border: 1px solid rgba(232, 80, 80, 0.2);
     background-color: rgba(232, 80, 80, 0.1);
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.deleteButton:hover,
+.deleteButton:focus-visible {
+    background-color: rgba(232, 80, 80, 0.25);
+    border-color: rgba(232, 80, 80, 0.5);
 }
 
 .paginationMobile {
@@ -128,6 +136,7 @@
     .myLibraryPanel {
 
         padding: 40px;
+        min-height: 655px;
 
     }
 
@@ -169,4 +178,6 @@
         padding: 40px 20px 20px 20px;
 
     }
+
+
 }

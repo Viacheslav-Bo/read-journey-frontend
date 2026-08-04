@@ -14,6 +14,7 @@ import { LibraryBook } from "../../types/library";
 import StatusSelect from "../../components/StatusSelect/StatusSelect";
 import LibraryBookModal from "../../components/LibraryBookModal/LibraryBookModal";
 import ConfirmModal from "../../components/ConfirmModal/ConfirmModal";
+import BookCardSkeleton from "../../components/BookCard/BookCardSkeleton";
 
 const PAGE_SIZE =
   window.innerWidth >= 1440 ? 10
@@ -22,7 +23,7 @@ const PAGE_SIZE =
 
 export default function LibraryPage() {
   const [status, setStatus] = useState<ReadingStatus | undefined>(undefined);
-  const { books, removeBook, refetch } = useLibrary(status);
+  const { books, removeBook, refetch, isLoading } = useLibrary(status);
   const [bookToDelete, setBookToDelete] = useState<string | null>(null);
   const [showAddedModal, setShowAddedModal] = useState(false);
   const [selectedBook, setSelectedBook] = useState<LibraryBook | null>(null);
@@ -97,7 +98,13 @@ export default function LibraryPage() {
             <StatusSelect value={status} onChange={setStatus} />
           </div>
 
-          {books.length === 0 ?
+          {isLoading ?
+            <div className={css.bookGrid}>
+              {Array.from({ length: PAGE_SIZE }).map((_, i) => (
+                <BookCardSkeleton key={i} />
+              ))}
+            </div>
+          : books.length === 0 ?
             <div className={css.emptyState}>
               <div className={css.emptyIcon}>📚</div>
               <p className={css.emptyText}>
