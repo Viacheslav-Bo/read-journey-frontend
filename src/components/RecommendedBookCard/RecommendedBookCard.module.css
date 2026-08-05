@@ -1,0 +1,62 @@
+.card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    padding: 0;
+    text-align: left;
+    transition: transform .25s ease;
+}
+
+.compact {
+    flex: 1;
+    min-width: 0;
+}
+
+.full {
+
+    flex-shrink: 0;
+}
+
+.card:hover .cover,
+.card:focus-visible .cover {
+    transform: scale(1.04);
+}
+
+.cover {
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: transform .25s ease;
+}
+
+.compact .cover {
+    width: 100%;
+    height: 107px;
+}
+
+.full .cover {
+    width: 100%;
+    aspect-ratio: 137 / 208;
+    object-fit: cover;
+}
+
+.bookTitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bookAuthor {
+    margin-top: 2px;
+    font-size: 10px;
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

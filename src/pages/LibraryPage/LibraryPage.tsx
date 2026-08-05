@@ -80,7 +80,7 @@ export default function LibraryPage() {
       <div className={css.pageWrapper}>
         <div className={css.topWrapper}>
           <AddBookForm onAdd={handleAdd} />
-          <RecommendedBooksPreview />
+          <RecommendedBooksPreview onBookAdded={refetch} />
         </div>
 
         <div className={css.myLibraryPanel}>

@@ -3,7 +3,7 @@ import BookFilters from "../../components/BookFilters/BookFilters";
 import { addBook } from "../../api/library/library";
 import { useState } from "react";
 import { toast } from "react-toastify";
-import BookCard from "../../components/BookCard/BookCard";
+import RecommendedBookCard from "../../components/RecommendedBookCard/RecommendedBookCard";
 import { Pagination } from "../../components/Pagination/Pagination";
 import { RecommendedBook } from "../../types/books";
 import axios from "axios";
@@ -12,10 +12,11 @@ import css from "./RecommendedPage.module.css";
 import AddBookModal from "../../components/AddBookModal/AddBookModal";
 import InfoCard from "../../components/InfoCard/InfoCard";
 import BookCardSkeleton from "../../components/BookCard/BookCardSkeleton";
+import BookAddedModal from "../../components/BookAddedModal/BookAddedModal";
 
 export default function RecommendedPage() {
   const [page, setPage] = useState(1);
-
+  const [showAddedModal, setShowAddedModal] = useState(false);
   const [manualPages, setManualPages] = useState("");
   const [filters, setFilters] = useState({ title: "", author: "" });
   const [selectedBook, setSelectedBook] = useState<RecommendedBook | null>(
@@ -60,8 +61,9 @@ export default function RecommendedPage() {
         coverUrl: selectedBook.coverUrl ?? undefined,
         openLibraryId: selectedBook.openLibraryId ?? undefined,
       });
-      toast.success("Book added to library");
+
       handleCloseModal();
+      setShowAddedModal(true);
     } catch (error) {
       if (axios.isAxiosError(error)) {
         toast.error(error.response?.data?.message || "Failed to add book");
@@ -102,11 +104,8 @@ export default function RecommendedPage() {
                 <BookCardSkeleton key={i} />
               ))
             : books.map((book) => (
-                <BookCard
-                  key={book.openLibraryId}
-                  title={book.title}
-                  author={book.author}
-                  coverUrl={book.coverUrl ?? "/placeholder-book.png"}
+                <RecommendedBookCard
+                  book={book}
                   onClick={() => handleSelectBook(book)}
                 />
               ))
@@ -121,6 +120,11 @@ export default function RecommendedPage() {
         onPagesChange={setManualPages}
         onAdd={handleAddToLibrary}
         onClose={handleCloseModal}
+      />
+
+      <BookAddedModal
+        isOpen={showAddedModal}
+        onClose={() => setShowAddedModal(false)}
       />
     </main>
   );
